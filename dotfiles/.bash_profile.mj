@@ -1,0 +1,10 @@
+ncbi() {
+   ssh -CYX -L 5901:ncbimac1056.ncbi.nlm.nih.gov:5920 -L 3389:${1:-mslogin01}.ncbi.nlm.nih.gov:3389 -L 3128:webproxy.ncbi.nlm.nih.gov:3128 -l mjohnson -c blowfish -p 22 ssh.ncbi.nlm.nih.gov
+}
+
+alias pd=pushd
+alias pp=popd
+alias l="ls -CFa"
+alias h=history
+alias kids="jobs -l"
+
